@@ -2,7 +2,7 @@
 
 echo "Starting Flow Core Service"
 cd /pactum/core/src
-node service.js &
+node server.js &
 
 cd ../../..
 
