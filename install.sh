@@ -1,5 +1,5 @@
 #!/bin/bash
 
 cd /pactum/core/src
-npm i
+npm install --only=prod
 cd ../../..

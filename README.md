@@ -21,5 +21,5 @@ Copy `package.json` and `src` folder into `core` folder.
 ## Running
 
 ```sh
-bash build.sh
+docker-compose up -d
 ```
