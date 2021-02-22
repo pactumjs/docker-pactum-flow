@@ -18,8 +18,20 @@ Copy the contents of `dist` folder into `app` folder.
 
 Copy `package.json` and `src` folder into `core` folder.
 
-## Running
+## Run
 
 ```sh
 docker-compose up -d
+```
+
+## Build
+
+```sh
+docker build -t asaianudeep/pactumjs:latest .
+```
+
+## Publish
+
+```sh
+docker push asaianudeep/pactumjs:latest
 ```
