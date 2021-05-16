@@ -21,17 +21,21 @@ Copy `package.json` and `src` folder into `core` folder.
 ## Run
 
 ```sh
+docker-compose down
 docker-compose up -d
 ```
 
 ## Build
 
 ```sh
-docker build -t asaianudeep/pactumjs:latest .
+docker build -t asaianudeep/pactumjs:latest -t asaianudeep/pactumjs:<version> .
 ```
+
+> Most of the times, the new changes are not getting reflected. Try removing existing images and build a new image with a different name.
 
 ## Publish
 
 ```sh
+docker push asaianudeep/pactumjs:<version>
 docker push asaianudeep/pactumjs:latest
 ```
