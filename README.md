@@ -4,7 +4,7 @@ PactumJS Flow in Docker
 
 ## Installation
 
-Create `app` & `core` folders.
+Create `app`, `core` and `captain` folders.
 
 #### Build pactum-flow-ui
 
@@ -17,6 +17,10 @@ Copy the contents of `dist` folder into `app` folder.
 #### Copy pactum-flow-api
 
 Copy `package.json` and `src` folder into `core` folder.
+
+#### Copy pactum-flow-captain-api
+
+Copy `package.json` and `src` folder into `captain` folder.
 
 ## Run
 
