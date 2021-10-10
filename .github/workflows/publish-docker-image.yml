@@ -33,7 +33,6 @@ jobs:
           repository: pactumjs/pactum-flow-api
         run: cp -r package.json src core
       
-
       - name: Step 4: Checkout pactum-flow-captain-api repo and copy the contents of it to captain folder.
         uses: actions/checkout@v2
         with:
