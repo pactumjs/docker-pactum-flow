@@ -24,10 +24,7 @@ jobs:
         run: npm install
         run: npm install -g @vue/cli
         run: npm run build
-        uses: canastro/copy-file-action@master
-        with:
-          source: './pactum-flow-ui/dist/*'
-          target: 'app'
+        run: cp -r dist/* app
       
       - name: Step 4: Checkout pactum-flow-api repo and copy the contents of it to core folder.
         uses: actions/checkout@v2
