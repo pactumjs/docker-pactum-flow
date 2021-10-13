@@ -24,7 +24,6 @@ jobs:
 
       - name: "Step 4: Build pactum-flow-ui, and copy the contents of dist folder into app folder."
         run: |
-          ls ${{ github.workspace }}
           npm install
           npm install -g @vue/cli
           npm run build
