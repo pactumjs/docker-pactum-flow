@@ -21,29 +21,35 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: pactumjs/pactum-flow-ui
+          path: ui
 
       - name: "Step 4: Build pactum-flow-ui, and copy the contents of dist folder into app folder."
         run: |
           npm install
           npm install -g @vue/cli
           npm run build
-          cp -r dist/* app
+        working-directory: ./ui
+      
+      - name: "Step 4.1: Copy ui"
+        run: cp -r ui/dist/* app
       
       - name: "Step 5: Checkout pactum-flow-api repo."
         uses: actions/checkout@v2
         with:
           repository: pactumjs/pactum-flow-api
+          path: api-core
 
       - name: "Step 6: Copy the required contents of pactum-flow-api to core folder."
-        run: cp -r package.json src core
+        run: cp -r api-core/package.json api-core/src core
       
       - name: "Step 7: Checkout pactum-flow-captain-api repo."
         uses: actions/checkout@v2
         with:
           repository: pactumjs/pactum-flow-captain-api
+          path: api-captain
       
       - name: "Step 8: Copy the required contents of pactum-flow-captain-api to captain folder."
-        run: cp -r package.json src captain
+        run: cp -r api-captain/package.json api-captain/src captain
 
       - name: "Step 9: Check out the current(docker-pactum-flow) repo."
         uses: actions/checkout@v2
