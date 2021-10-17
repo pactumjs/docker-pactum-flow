@@ -58,7 +58,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: asaianudeep/pactumjs
+          images: pactumjs/flows
       
       - name: "Step 12: Build and push Docker image."
         uses: docker/build-push-action@v2
