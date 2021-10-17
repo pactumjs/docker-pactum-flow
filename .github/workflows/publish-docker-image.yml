@@ -9,6 +9,9 @@ jobs:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
     steps:
+      - name: "Step 9: Check out the current(docker-pactum-flow) repo."
+        uses: actions/checkout@v2
+        
       - name: "Step 1: Create app, core, and captain folders."
         run: mkdir app core captain
 
@@ -50,9 +53,6 @@ jobs:
       
       - name: "Step 8: Copy the required contents of pactum-flow-captain-api to captain folder."
         run: cp -r api-captain/package.json api-captain/src captain
-
-      - name: "Step 9: Check out the current(docker-pactum-flow) repo."
-        uses: actions/checkout@v2
       
       - name: "Step 10: Log in to Docker Hub."
         uses: docker/login-action@v1
